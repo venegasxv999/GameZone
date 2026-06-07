@@ -1,0 +1,28 @@
+[ {
+  "title" : "Cyberpunk",
+  "price" : 150000.0,
+  "platform" : "PC",
+  "stock" : 10,
+  "genre" : "RPG",
+  "sizeGB" : 70.5,
+  "downloadPlatform" : "Steam",
+  "displayInfo" : "Digital -> Título: Cyberpunk | Plataforma: PC | Precio Base: $150000.0 | Stock: 10 | Tamaño: 70.5GB | Tienda: Steam"
+}, {
+  "title" : "Mario Kart",
+  "price" : 200000.0,
+  "platform" : "Switch",
+  "stock" : 5,
+  "genre" : "Racing",
+  "condition" : "Usado",
+  "distributor" : "Nintendo",
+  "displayInfo" : "Físico -> Título: Mario Kart | Plataforma: Switch | Precio Base: $200000.0 | Stock: 5 | Condición: Usado | Distribuidor: Nintendo"
+}, {
+  "title" : "FIFA 27",
+  "price" : 180000.0,
+  "platform" : "PS5",
+  "stock" : 20,
+  "genre" : "DEPORTE",
+  "condition" : "NUEVO",
+  "distributor" : "EA",
+  "displayInfo" : "Físico -> Título: FIFA 27 | Plataforma: PS5 | Precio Base: $180000.0 | Stock: 20 | Condición: NUEVO | Distribuidor: EA"
+} ]
