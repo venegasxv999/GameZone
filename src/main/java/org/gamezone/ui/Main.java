@@ -19,6 +19,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -392,7 +393,23 @@ public class Main extends Application {
         TableColumn<Sale, Double> colTotal = new TableColumn<>("Total");
         colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
 
-        table.getColumns().addAll(colId, colTotal, colName, colPrice);
+        TableColumn<Sale, LocalDateTime> colDate = new TableColumn<>("Fecha");
+        colDate.setCellValueFactory(new PropertyValueFactory<>("saleDate"));
+
+        // Format the date so it is readable
+        colDate.setCellFactory(column -> new TableCell<Sale, LocalDateTime>() {
+            @Override
+            protected void updateItem(LocalDateTime item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    setText(null);
+                } else {
+                    setText(item.format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+                }
+            }
+        });
+
+        table.getColumns().addAll(colId, colTotal, colName, colPrice, colDate);
         table.getItems().addAll(service.getSalesHistory());
 
         showTableWindow("Historial de Ventas", table);
