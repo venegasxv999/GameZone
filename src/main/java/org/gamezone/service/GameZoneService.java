@@ -5,16 +5,18 @@ import org.gamezone.repository.JsonFileRepository;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class GameZoneService {
     private JsonFileRepository repository;
     private List<Sale> salesHistory;
 
+    // Service to manage business logic and link the UI with the repository
     public GameZoneService() {
         this.repository = new JsonFileRepository();
         this.salesHistory = new ArrayList<>();
     }
 
-    // CREATE
+    // CREATE: Add a new game after validating basic data
     public void addVideoGame(VideoGame game) throws Exception {
         if (game.getTitle() == null || game.getTitle().trim().isEmpty()) {
             throw new Exception("El título no puede estar vacío.");
@@ -86,10 +88,7 @@ public class GameZoneService {
             throw new Exception("Este artículo no está disponible para la venta.");
         }
 
-
-
         repository.update(game); // Save new stock
-
         Sale newSale = new Sale(null, game, quantity, game.calculateFinalPrice());
         salesHistory.add(newSale);
         return newSale;

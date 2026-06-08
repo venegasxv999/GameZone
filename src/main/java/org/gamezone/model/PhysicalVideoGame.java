@@ -4,12 +4,18 @@ public class PhysicalVideoGame extends VideoGame implements ISellable, IDisplaya
     private String condition;
     private String distributor;
 
+    // Required empty constructor for json
+    public PhysicalVideoGame() {
+    }
+
+    // Constructor for Physical Games
     public PhysicalVideoGame(String title, double price, String platform, int stock, String genre, String condition, String distributor) {
         super(title, price, platform, stock, genre);
         this.condition = condition;
         this.distributor = distributor;
     }
 
+    // Getters and Setters
     public String getCondition() { return condition; }
     public void setCondition(String condition) { this.condition = condition; }
 
@@ -28,6 +34,7 @@ public class PhysicalVideoGame extends VideoGame implements ISellable, IDisplaya
 
     @Override
     public double sell(int qty) throws IllegalArgumentException {
+        // Validate stock before selling
         if (qty > this.stock) {
             throw new IllegalArgumentException("Stock insuficiente para: " + this.title);
         }
@@ -42,6 +49,7 @@ public class PhysicalVideoGame extends VideoGame implements ISellable, IDisplaya
 
     @Override
     public Object[] toTableRow() {
+        // Prepare data for UI table display
         return new Object[]{title, platform, genre, stock, calculateFinalPrice(), "Físico"};
     }
 

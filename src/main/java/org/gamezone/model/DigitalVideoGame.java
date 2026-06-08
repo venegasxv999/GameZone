@@ -5,12 +5,18 @@ public class DigitalVideoGame extends VideoGame implements ISellable, IDisplayab
     private double sizeGB;
     private String downloadPlatform;
 
+    // Required empty constructor for json
+    public DigitalVideoGame() {
+    }
+
+    // Constructor for Digital Games
     public DigitalVideoGame(String title, double price, String platform, int stock, String genre, double sizeGB, String downloadPlatform) {
         super(title, price, platform, stock, genre);
         this.sizeGB = sizeGB;
         this.downloadPlatform = downloadPlatform;
     }
 
+    // Getters and Setters
     public double getSizeGB() { return sizeGB; }
     public void setSizeGB(double sizeGB) { this.sizeGB = sizeGB; }
 
@@ -29,6 +35,7 @@ public class DigitalVideoGame extends VideoGame implements ISellable, IDisplayab
 
     @Override
     public double sell(int qty) throws IllegalArgumentException {
+        // Validate stock before selling
         if (qty > this.stock) {
             throw new IllegalArgumentException("Stock insuficiente para: " + this.title);
         }
@@ -43,6 +50,7 @@ public class DigitalVideoGame extends VideoGame implements ISellable, IDisplayab
 
     @Override
     public Object[] toTableRow() {
+        // Prepare data for UI table display
         return new Object[]{title, platform, genre, stock, calculateFinalPrice(), "Digital"};
     }
 

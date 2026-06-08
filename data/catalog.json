@@ -1,0 +1,41 @@
+[ {
+  "tipoJuego" : "Digital",
+  "title" : "CYBERPUNK",
+  "price" : 150000.0,
+  "platform" : "PC",
+  "stock" : 8,
+  "genre" : "RPG",
+  "sizeGB" : 70.5,
+  "downloadPlatform" : "STEAM",
+  "displayInfo" : "Digital -> Título: CYBERPUNK | Plataforma: PC | Precio Base: $150000.0 | Stock: 8 | Tamaño: 70.5GB | Tienda: STEAM"
+}, {
+  "tipoJuego" : "Physical",
+  "title" : "MARIO KART",
+  "price" : 200000.0,
+  "platform" : "SWITCH",
+  "stock" : 1,
+  "genre" : "RACING",
+  "condition" : "USADO",
+  "distributor" : "NINTENDO",
+  "displayInfo" : "Físico -> Título: MARIO KART | Plataforma: SWITCH | Precio Base: $200000.0 | Stock: 1 | Condición: USADO | Distribuidor: NINTENDO"
+}, {
+  "tipoJuego" : "Physical",
+  "title" : "RED DEAD REDEMPTION 2 ",
+  "price" : 80000.0,
+  "platform" : "PS4",
+  "stock" : 10,
+  "genre" : "AVENTURA",
+  "condition" : "USADO",
+  "distributor" : "ROCKSTAR GAMES",
+  "displayInfo" : "Físico -> Título: RED DEAD REDEMPTION 2  | Plataforma: PS4 | Precio Base: $80000.0 | Stock: 10 | Condición: USADO | Distribuidor: ROCKSTAR GAMES"
+}, {
+  "tipoJuego" : "Physical",
+  "title" : "EA SPORTS FC 27",
+  "price" : 270000.0,
+  "platform" : "PS5",
+  "stock" : 10,
+  "genre" : "DEPORTE",
+  "condition" : "NUEVO",
+  "distributor" : "ELECTRONIC ARTS",
+  "displayInfo" : "Físico -> Título: EA SPORTS FC 27 | Plataforma: PS5 | Precio Base: $270000.0 | Stock: 10 | Condición: NUEVO | Distribuidor: ELECTRONIC ARTS"
+} ]
